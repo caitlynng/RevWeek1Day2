@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Register for Boba Buddies</h1>
+    <form id="registrationForm" action="about:blank" method="post" target="_blank">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="password">Password (8-20 characters):</label>
+        <input type="password" id="password" name="password" minlength="8" maxlength="20" required><br><br>
+
+        <label for="sweetLevel">
+            How sweet do you like your boba?
+        </label><br>
+        <select id="sweetLevel" name="sweetLevel">
+            <option value="no_sweet">No Sugar</option>
+            <option value="light_sweet">Light Sugar</option>
+            <option selected ="normal_sweet">Normal Sugar</option>
+            <option value="extra_sweet">Extra Sugar</option>
+        </select><br><br>
+    
+        <label for="bio">What are your favorte boba drinks?</label><br>
+        <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br><br>
+
+        <label for="profilePhoto">Upload profile photo:</label>
+        <input type="file" id="profilePhoto" name="profilePhoto"><br><br>
+
+        <label for="subscribe">Subscribe to Boba Buddies Events:</label>
+        <input type="checkbox" id="subscribe" name="subscribe"><br><br>
+        
+        <input type="submit" value="Submit">
+        <button  id="resetButton" type="button" onclick="resetForm()">Reset Form</button>
+    </form>
+
+    <script>
+        function resetForm() {
+            document.getElementById('registrationForm').reset();
+        }
+    </script>
+</body>
+</html>
